@@ -70,8 +70,8 @@ export default function TranscriptionsPage() {
 
 	return (
 		<div className="container mx-auto px-4 py-5">
-			<div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
-				<div>
+			<div className="flex flex-col space-y-5 md:flex-row md:items-center justify-between mb-8">
+				<div className="flex flex-col">
 					<h1 className="text-3xl font-bold mb-2 bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500 bg-clip-text text-transparent">
 						Transcription History
 					</h1>
@@ -146,7 +146,7 @@ export default function TranscriptionsPage() {
 														<span>•</span>
 														<Badge
 															variant="secondary"
-															className="text-xs">
+															className="text-xs h-8">
 															{transcription.duration}s
 														</Badge>
 													</>
@@ -178,7 +178,7 @@ export default function TranscriptionsPage() {
 									</div>
 								</CardHeader>
 								<CardContent>
-									<p className="text-foreground leading-relaxed overflow-scroll">
+									<p className="text-foreground leading-relaxed line-clamp-3 overflow-y-scroll">
 										{transcription.transcription}
 									</p>
 								</CardContent>
